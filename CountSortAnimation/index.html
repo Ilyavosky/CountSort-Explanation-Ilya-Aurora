@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Sort - Visualización</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Count Sort</h1>
+        <p class="subtitle">Visualización Interactiva del Algoritmo de Ordenamiento</p>
+
+        <div class="controls">
+            <button class="btn-primary" onclick="generateArray()">🔄 Nuevo Array</button>
+            <button class="btn-primary" id="startBtn" onclick="startSort()">▶️ Iniciar</button>
+            <button class="btn-secondary" id="pauseBtn" onclick="pauseSort()" disabled>⏸️ Pausar</button>
+            <button class="btn-secondary" onclick="resetVisualization()">🔄 Reiniciar</button>
+        </div>
+
+        <div class="speed-control">
+            <label>Velocidad:</label>
+            <input type="range" id="speedSlider" min="100" max="2000" value="1000" step="100">
+            <span id="speedValue">1000ms</span>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <div class="info-label">Paso Actual</div>
+                <div class="info-value" id="currentStep">0</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Comparaciones</div>
+                <div class="info-value" id="comparisons">0</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Operaciones</div>
+                <div class="info-value" id="operations">0</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Rango</div>
+                <div class="info-value" id="range">0</div>
+            </div>
+        </div>
+
+        <div class="step-description" id="stepDescription">
+            Presiona "Iniciar" para comenzar la visualización del Count Sort
+        </div>
+
+        <div class="visualization-area">
+            <h3 style="text-align: center; margin-bottom: 20px; color: #667eea;">📊 Array Original</h3>
+            <div class="array-container" id="arrayContainer"></div>
+
+            <h3 style="text-align: center; margin-bottom: 20px; color: #667eea;">🔢 Array de Conteo</h3>
+            <div class="count-array" id="countArray"></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);"></div>
+                <span>Normal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);"></div>
+                <span>Comparando</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <span>Contando</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);"></div>
+                <span>Ordenado</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
