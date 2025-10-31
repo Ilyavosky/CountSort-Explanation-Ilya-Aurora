@@ -253,4 +253,4 @@ Proyecto educativo de uso libre para fines académicos y de aprendizaje.
 
 ## Autor
 
-Proyecto desarrollado con fines educativos para demostrar la implementación y visualización del algoritmo Count Sort.
+Proyecto desarrollado con fines educativos por Ilya Cortés Ruiz y Brittany Aurora Hernandez Muñoz para demostrar la implementación y visualización del algoritmo Count Sort.
